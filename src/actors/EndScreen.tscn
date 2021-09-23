@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/userinterface/PlayButton.gd" type="Script" id=1]
+[ext_resource path="res://src/actors/EndScreen.gd" type="Script" id=2]
+[ext_resource path="res://assets/background.png" type="Texture" id=3]
+[ext_resource path="res://src/userinterface/QuitButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/userinterface/Title.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=6]
+[ext_resource path="res://src/userinterface/ChangeScene.tscn" type="PackedScene" id=7]
+
+[node name="EndScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 1006.0
+margin_bottom = 590.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.601
+anchor_right = 0.5
+anchor_bottom = 0.601
+margin_left = -101.5
+margin_top = -29.7647
+margin_right = 121.5
+margin_bottom = 77.2353
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="Menu" instance=ExtResource( 7 )]
+text = "Play Again"
+script = ExtResource( 1 )
+next_scene_path = "res://src/actors/Level01.tscn"
+
+[node name="QuitButton" parent="Menu" instance=ExtResource( 4 )]
+margin_top = 55.0
+margin_bottom = 107.0
+
+[node name="Title" parent="." instance=ExtResource( 5 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -389.937
+margin_top = -260.031
+margin_right = 195.063
+margin_bottom = -143.031
+text = "Congratulations!
+You finsihed the game"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -147.697
+margin_top = 205.162
+margin_right = 124.303
+margin_bottom = 270.162
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Yout final score is %s
+You died %s times."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
