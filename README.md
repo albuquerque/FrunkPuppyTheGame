@@ -11,3 +11,7 @@ The frunkpuppy logo is a trademark of [Frunkpuppy.com](frunkpuppy.com) provided 
 [Sam Albuquerque](https://twitter.com/OfficialABQ)
 
 This repo contains the source of the game made in [Godot Engine](https://godotengine.org) which can be run on Linux, Mac and Windows.
+
+### Binary Downloads:
+* Mac: https://drive.google.com/file/d/1I_xNi3nSx2JQJAx2xCHcN2sxnkagynT-/view?usp=sharing
+* Windows(untested): https://drive.google.com/file/d/1H9oWkln3sJ6CJI3AmR4aClvh1EIN7UXy/view?usp=sharing
